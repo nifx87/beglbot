@@ -13,16 +13,16 @@ $message= $output['message']['text'];
 
 switch ($message)
 {
-    case '/start'
+    case '/start';
         $message = 'Что бы заказать товар - отправьте сообщение цифрами 55 или нажмите кнопку "ВЫБРАТЬ ТОВАР"
 Что бы заказать товар с прайса - отправьте сообщение цифрами "33" или нажмите кнопку "ПРАЙС"';
-        sendMessage($token,$id,$message);
+        sendMessage($token, $id, $message);
         break;
-    case 'off'
+    case 'off';
         $message = "Вы отказалиь от рассылки";
-        sendMessage($token,$id,$message);
+        sendMessage($token, $id, $message);
         break;
-    case '55'
+    case '55';
         $message = "1.БЕЛГОРОД:
 SK-0.5-NEW (1400руб) - ответ - 501 
 KRISS-0.5NEW (1400руб) - ответ - 521 
@@ -49,9 +49,9 @@ Belgorod ROYAL SPEED 05g (1700руб) - ответ - 911
 Сделайте выбор и введите соответствующий номер 
 
 Что бы отказаться от рассылки -  введите ответ - off";
-        sendMessage($token,$id,$message);
+        sendMessage($token, $id, $message);
         break;
-    case '33'
+    case '33';
         $message = "1.БЕЛГОРОД:
 SK-0.5-NEW (1400руб) - ответ - 501 
 KRISS-0.5NEW (1400руб) - ответ - 521 
@@ -78,13 +78,16 @@ Belgorod ROYAL SPEED 05g (1700руб) - ответ - 911
 Сделайте выбор и введите соответствующий номер 
 
 Что бы отказаться от рассылки -  введите ответ - off";
-        sendMessage($token,$id,$message);
+        sendMessage($token, $id, $message);
         break;
     default:
         $message = 'Что бы заказать товар - отправьте сообщение цифрами 55 или нажмите кнопку "ВЫБРАТЬ ТОВАР"
 Что бы заказать товар с прайса - отправьте сообщение цифрами "33" или нажмите кнопку "ПРАЙС"';
-        sendMessage($token,$id,$message);
+        sendMessage($token, $id, $message);
+        break;
+        
 }
+
 
 sendMessage($token,$id,$message);
 function sendMessage($token,$id,$message)
