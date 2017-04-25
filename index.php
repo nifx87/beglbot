@@ -6,7 +6,7 @@
  * Time: 12:49
  */
 $url ="https://api.telegram.org/bot" ;
-$token ="324117481:AAEtL6PPZmnQ8gYCsyJeC2Rf1AUJ9GuG8GA" ;
+$token ="" ;
 $start = "/start";
 $output = json_decode(file_get_contents('php://input'),true);
 $message = $output['maessage'];
