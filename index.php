@@ -86,10 +86,10 @@ Belgorod ROYAL SPEED 05g (1700руб) - ответ - 911
         sendMessage($token,$id,$message);
 }
 
-sendMessage($token,$id);
-function sendMessage($token,$id)
+sendMessage($token,$id,$message);
+function sendMessage($token,$id,$message)
 {
-    file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=Магазин временно не работает.");
+    file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
 }
 
 file_put_contents('logs.txt',$output);
