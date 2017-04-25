@@ -6,4 +6,4 @@
  * Time: 12:49
  */
 $output = file_get_contents('php://input');
-file_put_contents('logs/txt',$output);
+file_put_contents('logs.txt',$output);
