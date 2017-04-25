@@ -8,7 +8,7 @@
 $token ="324117481:AAEtL6PPZmnQ8gYCsyJeC2Rf1AUJ9GuG8GA" ;
 $start = "/start";
 $output = json_decode(file_get_contents('php://input'),true);
-$id = $output['message']['id'];
+$id = $output['message']['chat']['id'];
 
 function sendMessage($token,$id)
 {
