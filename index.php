@@ -85,11 +85,10 @@ Belgorod ROYAL SPEED 05g (1700руб) - ответ - 911
 Что бы заказать товар с прайса - отправьте сообщение цифрами "33" или нажмите кнопку "ПРАЙС"';
         sendMessage($token, $id, $message);
         break;
-        
+
 }
 
-
-sendMessage($token,$id,$message);
+//sendMessage($token,$id,$message);
 function sendMessage($token,$id,$message)
 {
     file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&text=".$message);
