@@ -8,11 +8,11 @@
 $token ="324117481:AAEtL6PPZmnQ8gYCsyJeC2Rf1AUJ9GuG8GA" ;
 $start = "/start";
 $output = json_decode(file_get_contents('php://input'),true);
-$id = $output['message']['chst']['id'];
+$id = $output['message']['chat']['id'];
 
 function sendMessage($token,$id)
 {
     file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&trext=Магазин временно не работает.");
 }
 
-file_put_contents('logs.txt',$output);
+file_put_contents('logs.txt',$id);
