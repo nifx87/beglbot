@@ -15,4 +15,4 @@ function sendMessage($token,$id)
     file_get_contents("https://api.telegram.org/bot".$token."/sendMessage?chat_id=".$id."&trext=Магазин временно не работает.");
 }
 
-file_put_contents('logs.txt',$id);
+file_put_contents('logs.txt',$output);
