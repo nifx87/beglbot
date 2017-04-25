@@ -29,6 +29,10 @@ switch ($message)
         $message = "333";
         sendMessage($token, $id, $message);
         break;
+    case '/stop';
+        $message = "До скорой встречи!";
+        sendMessage($token, $id, $message);
+        break;
     default:
         $message = "Я отдыхаю";
         sendMessage($token, $id, $message);
