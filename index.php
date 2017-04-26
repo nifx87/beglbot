@@ -14,7 +14,7 @@ $message= $output['message']['text'];
 switch ($message)
 {
     case '/start';
-        $message = "Бот является демонстрацией";
+        $message = '<p>Бот является демонстрацией</p><p>Ждем активации</p>';
         sendMessage($token, $id, $message.prymKeyMeny());
         break;
     case 'off';
